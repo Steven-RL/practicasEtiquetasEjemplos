@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla Comparativa - Etiquetas Obsoletas vs Modernas</title>
+</head>
+<body>
+    <header>
+        <h1>Tabla Comparativa: Etiquetas Obsoletas vs Modernas</h1>
+        <p>Del HTML tradicional a las mejores prácticas de HTML5</p>
+        <nav>
+            <a href="index.html">Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Índice</h2>
+            <article>
+                <h3>Transición de Etiquetas en HTML</h3>
+                <p>
+                    Con la llegada de HTML5, muchas etiquetas que mezclaban contenido con presentación fueron 
+                    declaradas obsoletas. Este cambio responde a la filosofía fundamental de separación de 
+                    responsabilidades: HTML para estructura, CSS para presentación y JavaScript para comportamiento.
+                </p>
+                <p>
+                    En esta sección analizaremos las etiquetas que han sido deprecadas o eliminadas, y sus 
+                    equivalentes modernos que ofrecen mejor semántica, accesibilidad y mantenibilidad.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Ilustración Comparativa</h2>
+            <img src="https://www.hostinger.com/mx/tutoriales/wp-content/uploads/sites/39/2022/10/image-9.png" 
+                 alt="Comparación visual entre HTML obsoleto y HTML5 moderno" 
+                 width="700" 
+                 height="350">
+        </section>
+
+        <section>
+            <h2>Comparativa Detallada de Etiquetas</h2>
+            
+            <table border="1">
+                <caption>Etiquetas Obsoletas vs Alternativas Modernas en HTML5</caption>
+                <thead>
+                    <tr>
+                        <th>Etiqueta Obsoleta</th>
+                        <th>Propósito Original</th>
+                        <th>Alternativa Moderna</th>
+                        <th>Razón del Cambio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;font&gt;</td>
+                        <td>Cambiar tipo, tamaño y color de fuente</td>
+                        <td>CSS (font-family, font-size, color)</td>
+                        <td>Separación de presentación del contenido</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;center&gt;</td>
+                        <td>Centrar contenido</td>
+                        <td>CSS (text-align: center; margin: auto)</td>
+                        <td>Presentación debe manejarse con CSS</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;big&gt;</td>
+                        <td>Texto más grande</td>
+                        <td>CSS (font-size) o &lt;strong&gt;/&lt;em&gt;</td>
+                        <td>Sin valor semántico, solo presentacional</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;small&gt; (redefinida)</td>
+                        <td>Texto más pequeño</td>
+                        <td>&lt;small&gt; (ahora con semántica) o CSS</td>
+                        <td>Ahora representa letra pequeña legal/notas</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;strike&gt; / &lt;s&gt;</td>
+                        <td>Texto tachado</td>
+                        <td>&lt;del&gt; (eliminado) o &lt;s&gt; (redefinida)</td>
+                        <td>Mayor claridad semántica del propósito</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;u&gt;</td>
+                        <td>Texto subrayado</td>
+                        <td>CSS (text-decoration) o &lt;mark&gt;</td>
+                        <td>Confusión con hipervínculos</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;frame&gt;</td>
+                        <td>Dividir ventana en marcos</td>
+                        <td>&lt;iframe&gt; (limitado) o diseño CSS</td>
+                        <td>Problemas de accesibilidad y SEO</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;frameset&gt;</td>
+                        <td>Definir conjunto de marcos</td>
+                        <td>CSS Grid, Flexbox</td>
+                        <td>Mejor control y responsividad</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;acronym&gt;</td>
+                        <td>Definir acrónimos</td>
+                        <td>&lt;abbr&gt;</td>
+                        <td>Redundancia con &lt;abbr&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;applet&gt;</td>
+                        <td>Embeber applets Java</td>
+                        <td>&lt;object&gt; o &lt;embed&gt;</td>
+                        <td>Tecnología obsoleta y riesgos de seguridad</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;basefont&gt;</td>
+                        <td>Fuente base del documento</td>
+                        <td>CSS (body { font-family: ... })</td>
+                        <td>Mezcla presentación con estructura</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;dir&gt;</td>
+                        <td>Lista de directorios</td>
+                        <td>&lt;ul&gt;</td>
+                        <td>Sin diferencia semántica con &lt;ul&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;blink&gt;</td>
+                        <td>Texto parpadeante</td>
+                        <td>CSS animations (si es necesario)</td>
+                        <td>Problemas de accesibilidad y usabilidad</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;marquee&gt;</td>
+                        <td>Texto desplazable</td>
+                        <td>CSS animations o JavaScript</td>
+                        <td>Estándar propietario, distrae al usuario</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Atributos Obsoletos en HTML5</h2>
+            
+            <article>
+                <h3>Atributos Deprecados y sus Alternativas</h3>
+                <p>
+                    Además de etiquetas completas, muchos atributos que controlaban la presentación han sido 
+                    eliminados en favor de CSS:
+                </p>
+            </article>
+
+            <table border="1">
+                <caption>Atributos Obsoletos vs CSS Moderno</caption>
+                <thead>
+                    <tr>
+                        <th>Atributo Obsoleto</th>
+                        <th>Elemento</th>
+                        <th>Alternativa CSS</th>
+                        <th>Ejemplo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>align</td>
+                        <td>Varios elementos</td>
+                        <td>text-align, float, flexbox</td>
+                        <td>text-align: center;</td>
+                    </tr>
+                    <tr>
+                        <td>bgcolor</td>
+                        <td>&lt;body&gt;, &lt;table&gt;</td>
+                        <td>background-color</td>
+                        <td>background-color: #f0f0f0;</td>
+                    </tr>
+                    <tr>
+                        <td>border</td>
+                        <td>&lt;img&gt;, &lt;table&gt;</td>
+                        <td>border</td>
+                        <td>border: 1px solid black;</td>
+                    </tr>
+                    <tr>
+                        <td>color</td>
+                        <td>&lt;font&gt;</td>
+                        <td>color</td>
+                        <td>color: #333333;</td>
+                    </tr>
+                    <tr>
+                        <td>height / width</td>
+                        <td>Varios (excepto multimedia)</td>
+                        <td>height, width</td>
+                        <td>width: 500px; height: 300px;</td>
+                    </tr>
+                    <tr>
+                        <td>hspace / vspace</td>
+                        <td>&lt;img&gt;</td>
+                        <td>margin</td>
+                        <td>margin: 10px 5px;</td>
+                    </tr>
+                    <tr>
+                        <td>link, vlink, alink</td>
+                        <td>&lt;body&gt;</td>
+                        <td>a:link, a:visited, a:active</td>
+                        <td>a:link { color: blue; }</td>
+                    </tr>
+                    <tr>
+                        <td>nowrap</td>
+                        <td>&lt;td&gt;, &lt;th&gt;</td>
+                        <td>white-space</td>
+                        <td>white-space: nowrap;</td>
+                    </tr>
+                    <tr>
+                        <td>size</td>
+                        <td>&lt;font&gt;, &lt;hr&gt;</td>
+                        <td>font-size, height</td>
+                        <td>font-size: 16px;</td>
+                    </tr>
+                    <tr>
+                        <td>valign</td>
+                        <td>&lt;td&gt;, &lt;th&gt;</td>
+                        <td>vertical-align</td>
+                        <td>vertical-align: middle;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Nuevas Etiquetas Semánticas en HTML5</h2>
+            
+            <article>
+                <h3>Elementos que Mejoran la Estructura</h3>
+                <p>
+                    HTML5 no solo eliminó etiquetas obsoletas, sino que introdujo nuevas etiquetas semánticas 
+                    que mejoran significativamente la estructura y accesibilidad de los documentos web:
+                </p>
+            </article>
+
+            <table border="1">
+                <caption>Nuevas Etiquetas Semánticas de HTML5</caption>
+                <thead>
+                    <tr>
+                        <th>Etiqueta</th>
+                        <th>Propósito</th>
+                        <th>Reemplaza a</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>&lt;header&gt;</td>
+                        <td>Encabezado de sección o página</td>
+                        <td>&lt;div id="header"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;nav&gt;</td>
+                        <td>Sección de navegación</td>
+                        <td>&lt;div id="nav"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;main&gt;</td>
+                        <td>Contenido principal del documento</td>
+                        <td>&lt;div id="main"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;article&gt;</td>
+                        <td>Contenido independiente y autocontenido</td>
+                        <td>&lt;div class="article"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;section&gt;</td>
+                        <td>Sección temática del contenido</td>
+                        <td>&lt;div class="section"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;aside&gt;</td>
+                        <td>Contenido tangencialmente relacionado</td>
+                        <td>&lt;div id="sidebar"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;footer&gt;</td>
+                        <td>Pie de página o sección</td>
+                        <td>&lt;div id="footer"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figure&gt;</td>
+                        <td>Contenido ilustrativo</td>
+                        <td>&lt;div class="figure"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;figcaption&gt;</td>
+                        <td>Leyenda para &lt;figure&gt;</td>
+                        <td>&lt;p class="caption"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;mark&gt;</td>
+                        <td>Texto destacado o resaltado</td>
+                        <td>&lt;span class="highlight"&gt;</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;time&gt;</td>
+                        <td>Fecha/hora legible por máquinas</td>
+                        <td>&lt;span class="date"&gt;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Lista de Beneficios del Cambio</h2>
+            <article>
+                <h3>¿Por qué migrar de etiquetas obsoletas a modernas?</h3>
+                <ol>
+                    <li><strong>Mejor Semántica:</strong> El código expresa claramente la intención y estructura del contenido</li>
+                    <li><strong>Accesibilidad Mejorada:</strong> Lectores de pantalla y tecnologías asistivas comprenden mejor el contenido</li>
+                    <li><strong>SEO Optimizado:</strong> Motores de búsqueda indexan y comprenden mejor la estructura del sitio</li>
+                    <li><strong>Mantenibilidad:</strong> Separación clara entre contenido, presentación y comportamiento</li>
+                    <li><strong>Compatibilidad:</strong> Mejor soporte en navegadores modernos y futuros</li>
+                    <li><strong>Responsividad:</strong> CSS moderno permite diseños adaptativos más fácilmente</li>
+                    <li><strong>Reutilización de Código:</strong> Estilos CSS pueden aplicarse a múltiples elementos</li>
+                    <li><strong>Validación:</strong> Cumplimiento con estándares W3C actuales</li>
+                    <li><strong>Rendimiento:</strong> Menor tamaño de archivos HTML al delegar estilos a CSS</li>
+                    <li><strong>Colaboración:</strong> Equipos pueden trabajar en HTML/CSS de forma independiente</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Evolución del HTML. Proyecto educativo sobre la historia de HTML.</p>
+        <p><a href="index.html">Inicio</a> | <a href="timeline.html">Anterior: Línea de Tiempo</a> | <a href="ventajas.html">Siguiente: Ventajas de HTML5</a></p>
+    </footer>
+</body>
+</html>
