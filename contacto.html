@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Suscripción - Evolución del HTML</title>
+</head>
+<body>
+    <header>
+        <h1>Contacto y Suscripción</h1>
+        <p>Mantente informado sobre las últimas novedades en HTML y desarrollo web</p>
+        <nav>
+            <a href="index.html">Volver al Inicio</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Índice</h2>
+            <article>
+                <h3>Ponte en Contacto con Nosotros</h3>
+                <p>
+                    Esta sección te permite enviar consultas, sugerencias o comentarios sobre el contenido 
+                    presentado en este sitio web educativo. También puedes suscribirte a nuestro boletín 
+                    para recibir actualizaciones sobre nuevas especificaciones HTML, tutoriales y mejores 
+                    prácticas en desarrollo web.
+                </p>
+                <p>
+                    Valoramos tu opinión y estamos comprometidos con proporcionar información técnica precisa 
+                    y actualizada sobre la evolución del lenguaje HTML.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Imagen de Contacto</h2>
+            <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" 
+                 alt="Código HTML en pantalla representando desarrollo web moderno" 
+                 width="700" 
+                 height="400">
+        </section>
+
+        <section>
+            <h2>Formulario de Contacto</h2>
+            
+            <article>
+                <h3>Envíanos tus Consultas</h3>
+                <p>
+                    Completa el siguiente formulario con tus datos y mensaje. Todos los campos marcados 
+                    con asterisco (*) son obligatorios. Utilizamos validación HTML5 nativa para garantizar 
+                    que la información proporcionada sea correcta.
+                </p>
+            </article>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>Información Personal</legend>
+                    
+                    <label for="nombre">Nombre Completo: *</label><br>
+                    <input type="text" 
+                           id="nombre" 
+                           name="nombre" 
+                           required 
+                           minlength="3" 
+                           maxlength="50"
+                           placeholder="Juan Pérez"
+                           title="Ingresa tu nombre completo (mínimo 3 caracteres)">
+                    <br><br>
+
+                    <label for="email">Correo Electrónico: *</label><br>
+                    <input type="email" 
+                           id="email" 
+                           name="email" 
+                           required 
+                           placeholder="ejemplo@correo.com"
+                           title="Ingresa un correo electrónico válido">
+                    <br><br>
+
+                    <label for="telefono">Teléfono:</label><br>
+                    <input type="tel" 
+                           id="telefono" 
+                           name="telefono" 
+                           pattern="[0-9]{10}"
+                           placeholder="0999999999"
+                           title="Ingresa 10 dígitos numéricos">
+                    <br><br>
+
+                    <label for="edad">Edad:</label><br>
+                    <input type="number" 
+                           id="edad" 
+                           name="edad" 
+                           min="13" 
+                           max="120"
+                           placeholder="25"
+                           title="Debes tener al menos 13 años">
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Área de Interés</legend>
+                    
+                    <label for="interes">Tema de Consulta: *</label><br>
+                    <select id="interes" name="interes" required title="Selecciona un tema">
+                        <option value="">-- Selecciona una opción --</option>
+                        <option value="html-basico">HTML Básico</option>
+                        <option value="html5">HTML5 y características modernas</option>
+                        <option value="semantica">Semántica web</option>
+                        <option value="accesibilidad">Accesibilidad web</option>
+                        <option value="apis">APIs de HTML5</option>
+                        <option value="migracion">Migración de código legacy</option>
+                        <option value="otro">Otro tema</option>
+                    </select>
+                    <br><br>
+
+                    <label>Nivel de Experiencia: *</label><br>
+                    <input type="radio" id="principiante" name="experiencia" value="principiante" required>
+                    <label for="principiante">Principiante</label><br>
+                    <input type="radio" id="intermedio" name="experiencia" value="intermedio">
+                    <label for="intermedio">Intermedio</label><br>
+                    <input type="radio" id="avanzado" name="experiencia" value="avanzado">
+                    <label for="avanzado">Avanzado</label><br>
+                    <input type="radio" id="profesional" name="experiencia" value="profesional">
+                    <label for="profesional">Profesional</label>
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Tu Mensaje</legend>
+                    
+                    <label for="mensaje">Consulta o Comentario: *</label><br>
+                    <textarea id="mensaje" 
+                              name="mensaje" 
+                              rows="6" 
+                              cols="50" 
+                              required 
+                              minlength="10"
+                              maxlength="500"
+                              placeholder="Escribe tu consulta aquí (mínimo 10 caracteres, máximo 500)"
+                              title="Escribe tu mensaje con al menos 10 caracteres"></textarea>
+                    <br><br>
+
+                    <label for="archivo">Adjuntar Archivo (opcional):</label><br>
+                    <input type="file" 
+                           id="archivo" 
+                           name="archivo"
+                           accept=".pdf,.doc,.docx,.txt"
+                           title="Formatos permitidos: PDF, DOC, DOCX, TXT">
+                    <br><br>
+                    <input type="file" 
+                           id="archivo" 
+                           name="archivo"
+                           accept=".pdf,.doc,.docx,.txt"
+                           title="Formatos prueba2">
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Preferencias de Comunicación</legend>
+                    
+                    <label>Temas de Interés (selecciona todos los que apliquen):</label><br>
+                    <input type="checkbox" id="newsletter-html" name="temas" value="html">
+                    <label for="newsletter-html">Actualizaciones de HTML</label><br>
+                    <input type="checkbox" id="newsletter-css" name="temas" value="css">
+                    <label for="newsletter-css">CSS y diseño web</label><br>
+                    <input type="checkbox" id="newsletter-js" name="temas" value="javascript">
+                    <label for="newsletter-js">JavaScript y APIs</label><br>
+                    <input type="checkbox" id="newsletter-accesibilidad" name="temas" value="accesibilidad">
+                    <label for="newsletter-accesibilidad">Accesibilidad web</label><br>
+                    <input type="checkbox" id="newsletter-seo" name="temas" value="seo">
+                    <label for="newsletter-seo">SEO y optimización</label>
+                    <br><br>
+
+                    <label for="frecuencia">Frecuencia de Correos:</label><br>
+                    <input type="range" 
+                           id="frecuencia" 
+                           name="frecuencia" 
+                           min="1" 
+                           max="4" 
+                           value="2"
+                           title="Selecciona la frecuencia deseada">
+                    <br>
+                    <small>1 = Semanal | 2 = Quincenal | 3 = Mensual | 4 = Trimestral</small>
+                    <br><br>
+
+                    <input type="checkbox" id="terminos" name="terminos" required>
+                    <label for="terminos">Acepto los términos y condiciones *</label>
+                    <br><br>
+
+                    <input type="checkbox" id="suscripcion" name="suscripcion">
+                    <label for="suscripcion">Deseo suscribirme al boletín informativo</label>
+                    <br><br>
+                </fieldset>
+
+                <br>
+
+                <input type="submit" value="Enviar Formulario">
+                <input type="reset" value="Limpiar Formulario">
+            </form>
+        </section>
+
+        <section>
+            <h2>Información de Contacto Adicional</h2>
+            
+            <table border="1">
+                <caption>Canales de Comunicación Disponibles</caption>
+                <thead>
+                    <tr>
+                        <th>Canal</th>
+                        <th>Información</th>
+                        <th>Tiempo de Respuesta</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Correo Electrónico</td>
+                        <td>info@evolucionhtml.edu</td>
+                        <td>24-48 horas</td>
+                    </tr>
+                    <tr>
+                        <td>Formulario Web</td>
+                        <td>Esta página</td>
+                        <td>48-72 horas</td>
+                    </tr>
+                    <tr>
+                        <td>Redes Sociales</td>
+                        <td>@EvolucionHTML</td>
+                        <td>Variable</td>
+                    </tr>
+                    <tr>
+                        <td>Foro de Soporte</td>
+                        <td>forum.evolucionhtml.edu</td>
+                        <td>Comunidad activa</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2>Preguntas Frecuentes</h2>
+            
+            <article>
+                <h3>Lista de Consultas Comunes</h3>
+                <ol>
+                    <li>
+                        <strong>¿Necesito conocimientos previos para entender el contenido?</strong><br>
+                        No es necesario, el sitio está diseñado para todos los niveles, desde principiantes 
+                        hasta profesionales.
+                    </li>
+                    <li>
+                        <strong>¿Con qué frecuencia se actualiza el contenido?</strong><br>
+                        Actualizamos el contenido trimestralmente para reflejar las últimas especificaciones 
+                        y mejores prácticas.
+                    </li>
+                    <li>
+                        <strong>¿Puedo usar este material con fines educativos?</strong><br>
+                        Sí, el contenido es de uso educativo libre. Solo citamos apropiadamente la fuente.
+                    </li>
+                    <li>
+                        <strong>¿Ofrecen certificaciones o cursos?</strong><br>
+                        Actualmente solo ofrecemos contenido informativo. Las certificaciones están en desarrollo.
+                    </li>
+                    <li>
+                        <strong>¿Cómo me desuscribo del boletín?</strong><br>
+                        Cada correo incluye un enlace de desuscripción al final del mensaje.
+                    </li>
+                </ol>
+            </article>
+        </section>
+
+        <section>
+            <h2>Recursos Adicionales Recomendados</h2>
+            
+            <article>
+                <h3>Enlaces Útiles</h3>
+                <ul>
+                    <li><strong>W3C HTML5 Specification:</strong> Documentación oficial del estándar</li>
+                    <li><strong>MDN Web Docs:</strong> Referencia completa de HTML y APIs</li>
+                    <li><strong>Can I Use:</strong> Compatibilidad de características HTML5 en navegadores</li>
+                    <li><strong>HTML5 Validator:</strong> Herramienta de validación de código</li>
+                    <li><strong>WebAIM:</strong> Recursos sobre accesibilidad web</li>
+                    <li><strong>A11y Project:</strong> Guías de accesibilidad para desarrolladores</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Evolución del HTML. Proyecto educativo sobre la historia de HTML.</p>
+        <p><a href="index.html">Inicio</a> | <a href="ventajas.html">Anterior: Ventajas de HTML5</a></p>
+        <p>Última actualización: <time datetime="2024-11-30">30 de noviembre de 2024</time></p>
+    </footer>
+</body>
+</html>
